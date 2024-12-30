@@ -8,6 +8,18 @@ const api = axios.create({
     },
 });
 
+
+// Request interceptor to attach token if available
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem('access');
+    if (token && config.headers) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  }, (error) => {
+    return Promise.reject(error);
+  });
+  
 // Function to get all departments
 export const getDepartments = () => api.get('/departments');
 
