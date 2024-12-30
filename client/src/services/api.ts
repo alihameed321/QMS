@@ -19,5 +19,5 @@ export const updateDepartment = (id: string | number, data: any) => api.put(`/de
 
 // Function to delete a department
 export const deleteDepartment = (id: string | number) => api.delete(`/departments/${id}`);
-
+//
 export default api; // Export the Axios instance for use in other files
