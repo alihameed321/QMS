@@ -1,0 +1,28 @@
+@layer base {
+  :root {
+    /* Background Colors */
+    --color-bg-primary: theme('colors.white');
+    --color-bg-secondary: theme('colors.gray.50');
+    --color-bg-tertiary: theme('colors.gray.100');
+
+    /* Text Colors */
+    --color-text-primary: theme('colors.gray.900');
+    --color-text-secondary: theme('colors.gray.700');
+    --color-text-tertiary: theme('colors.gray.500');
+
+    /* Border Colors */
+    --color-border-primary: theme('colors.gray.200');
+    --color-border-secondary: theme('colors.gray.300');
+
+    /* Form Colors */
+    --color-input-bg: theme('colors.white');
+    --color-input-border: theme('colors.gray.300');
+    --color-input-focus: theme('colors.blue.500');
+
+    /* Button Colors */
+    --color-button-primary: theme('colors.blue.600');
+    --color-button-primary-hover: theme('colors.blue.700');
+    --color-button-secondary: theme('colors.gray.200');
+    --color-button-secondary-hover: theme('colors.gray.300');
+  }
+}

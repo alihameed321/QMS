@@ -13,25 +13,39 @@ import StudentPage from '../pages/student/StudentPage';
 import StudentDetailPage from '../pages/student/StudentDetailPage';
 import AttendanceDetailPage from '../pages/attendance/AttendanceDetailPage';
 import AttendancePage from '../pages/attendance/AttendancePage';
-// Import other pages...
+import AvailabilityPage from '../pages/availability/AvailabilityPage';
+import AvailabilityDetailPage from '../pages/availability/AvailabilityDetailPage';
 
 const AppRoutes = () => (
     <Routes>
-        {/* Other routes */}
+        {/* Core Routes */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/departments" element={<DepartmentPage />} />
-        <Route path="/courses" element={<CoursePage />} />
-        <Route path="/profiles" element={<ProfilePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/profiles" element={<ProfilePage />} />
+
+        {/* Department Routes */}
+        <Route path="/departments" element={<DepartmentPage />} />
         <Route path="/departments/:id" element={<DepartmentDetailPage />} />
+
+        {/* Course Routes */}
+        <Route path="/courses" element={<CoursePage />} />
         <Route path="/courses/:id" element={<CourseDetailPage />} />
+
+        {/* Class Routes */}
         <Route path="/classes" element={<ClassPage />} />
         <Route path="/classes/:id" element={<ClassDetailPage />} />
+
+        {/* Student Routes */}
         <Route path="/students" element={<StudentPage />} />
         <Route path="/students/:id" element={<StudentDetailPage />} />
+
+        {/* Attendance Routes */}
         <Route path="/attendances" element={<AttendancePage />} />
         <Route path="/attendances/:id" element={<AttendanceDetailPage />} />
-        {/* Other routes */}
+
+        {/* Availability Routes */}
+        <Route path="/availabilities" element={<AvailabilityPage />} />
+        <Route path="/students/:id/availability" element={<AvailabilityDetailPage />} />
     </Routes>
 );
 

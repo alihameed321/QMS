@@ -73,7 +73,7 @@ class Student(models.Model):
 
 
 class Class(models.Model):
-    assigned_faculty = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    assigned_responsible = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     school_year = models.CharField(max_length=250)
     level = models.CharField(max_length=250)
     name = models.CharField(max_length=250)

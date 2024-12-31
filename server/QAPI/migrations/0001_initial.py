@@ -98,7 +98,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='class',
-            name='assigned_faculty',
+            name='assigned_responsible',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='QAPI.userprofile'),
         ),
     ]

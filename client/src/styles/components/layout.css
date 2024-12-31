@@ -1,0 +1,102 @@
+@layer components {
+  /* Page Layout */
+  .page-container {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900;
+  }
+
+  .page-content {
+    @apply container mx-auto px-4 py-8;
+  }
+
+  /* Grid Layouts */
+  .grid-container {
+    @apply grid gap-6;
+  }
+
+  .grid-cols-auto-fit {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  /* Flex Layouts */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-stack {
+    @apply flex flex-col;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    @apply fixed top-0 left-0 h-full w-64 bg-white shadow-lg 
+           transform transition-transform duration-300 ease-in-out
+           dark:bg-gray-800;
+  }
+
+  .sidebar-collapsed {
+    @apply -translate-x-full;
+  }
+
+  /* Navigation */
+  .nav-container {
+    @apply bg-white shadow-sm dark:bg-gray-800;
+  }
+
+  .nav-content {
+    @apply container mx-auto px-4;
+  }
+
+  .nav-item {
+    @apply px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100
+           dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700
+           rounded-lg transition-colors duration-200;
+  }
+
+  .nav-item-active {
+    @apply bg-gray-100 text-gray-900
+           dark:bg-gray-700 dark:text-white;
+  }
+
+  /* Section Layouts */
+  .section {
+    @apply py-12;
+  }
+
+  .section-sm {
+    @apply py-8;
+  }
+
+  .section-lg {
+    @apply py-16;
+  }
+
+  /* Container Variants */
+  .container-sm {
+    @apply max-w-3xl mx-auto px-4;
+  }
+
+  .container-md {
+    @apply max-w-5xl mx-auto px-4;
+  }
+
+  .container-lg {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Responsive Padding */
+  .responsive-p {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10;
+  }
+
+  .responsive-px {
+    @apply px-4 sm:px-6 md:px-8 lg:px-10;
+  }
+
+  .responsive-py {
+    @apply py-4 sm:py-6 md:py-8 lg:py-10;
+  }
+}

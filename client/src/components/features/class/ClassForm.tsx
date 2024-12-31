@@ -12,8 +12,8 @@ const ClassForm: React.FC<ClassFormProps> = ({ initialData = {}, onSuccess }) =>
   const [name, setName] = useState(initialData.name || "");
   const [level, setLevel] = useState(initialData.level || "");
   const [schoolYear, setSchoolYear] = useState(initialData.school_year || "");
-  const [assignedFaculty, setAssignedFaculty] = useState<number | null>(
-    initialData.assigned_faculty || null
+  const [assignedResponsible, setAssignedResponsible] = useState<number | null>(
+    initialData.assigned_responsible || null
   );
   const [error, setError] = useState<string | null>(null);
 
@@ -24,7 +24,7 @@ const ClassForm: React.FC<ClassFormProps> = ({ initialData = {}, onSuccess }) =>
         name,
         level,
         school_year: schoolYear,
-        assigned_faculty: assignedFaculty,
+        assigned_responsible: assignedResponsible,
       };
 
       let result: Class;
@@ -80,11 +80,11 @@ const ClassForm: React.FC<ClassFormProps> = ({ initialData = {}, onSuccess }) =>
       </div>
 
       <div>
-        <label>Assigned Faculty ID:</label>
+        <label>Assigned Responsible ID:</label>
         <input
           type="number"
-          value={assignedFaculty || ""}
-          onChange={(e) => setAssignedFaculty(Number(e.target.value))}
+          value={assignedResponsible || ""}
+          onChange={(e) => setAssignedResponsible(Number(e.target.value))}
           required
         />
       </div>

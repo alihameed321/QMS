@@ -45,7 +45,7 @@ const ClassList: React.FC<ClassListProps> = ({ onEdit, onDelete }) => {
             <h3>{classItem.name}</h3>
             <p>Level: {classItem.level}</p>
             <p>School Year: {classItem.school_year}</p>
-            <p>Assigned Faculty ID: {classItem.assigned_faculty}</p>
+            <p>Assigned Responsible ID: {classItem.assigned_responsible}</p>
 
             {/* View Details Link */}
             <Link to={`/classes/${classItem.id}`}>View Details</Link>

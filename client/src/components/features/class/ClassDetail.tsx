@@ -36,7 +36,7 @@ const ClassDetail: React.FC<ClassDetailProps> = ({ id }) => {
       <h2>Class: {classItem.name}</h2>
       <p>Level: {classItem.level}</p>
       <p>School Year: {classItem.school_year}</p>
-      <p>Assigned Faculty ID: {classItem.assigned_faculty}</p>
+      <p>Assigned Responsible ID: {classItem.assigned_responsible}</p>
     </div>
   );
 };
