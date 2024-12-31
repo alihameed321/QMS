@@ -17,6 +17,7 @@ const LoginPage: React.FC = () => {
       localStorage.setItem('refresh', data.refresh);
       // Redirect to home or dashboard
       navigate('/dashboard');
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err: any) {
       setError('Invalid credentials');
     }

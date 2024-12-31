@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { availabilityService } from '../../../services/availabilityService';
-import { AvailabilityDetail, DAYS_OF_WEEK } from '../../../types/availability';
+import { DAYS_OF_WEEK } from '../../../types/availability';
 
 interface Props {
     studentId: number;

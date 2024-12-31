@@ -9,9 +9,15 @@ class DepartmentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    role = serializers.CharField(source='get_user_type_display', read_only=True)
+    username = serializers.CharField(source='user.username', read_only=True)
+    email = serializers.CharField(source='user.email', read_only=True)
+    
     class Meta:
         model = UserProfile
-        fields = '__all__'
+        fields = ['id', 'user', 'username', 'email', 'contact', 'dob', 'address', 
+                 'avatar', 'user_type', 'role', 'gender', 'department']
+        read_only_fields = ['role', 'username', 'email']
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:

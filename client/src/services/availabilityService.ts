@@ -2,6 +2,13 @@ import api from './api';
 import { Availability, AvailabilityDetail } from '../types/availability';
 
 export const availabilityService = {
+
+    getAll: async (): Promise<AvailabilityDetail[]> => {
+        const response = await api.get('/availabilities/');
+        return response.data;
+    },
+
+
     // Get all availabilities for a student
     getByStudent: async (studentId: number): Promise<AvailabilityDetail[]> => {
         const response = await api.get(`/availabilities/?student=${studentId}`);

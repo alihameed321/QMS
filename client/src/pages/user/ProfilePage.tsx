@@ -26,7 +26,7 @@ const ProfilePage: React.FC = () => {
   return (
     <div style={{ padding: "1rem" }}>
       <h1>User Profiles</h1>
-      <button onClick={handleCreateClick}>Create New Profile</button>
+      {/* <button onClick={handleCreateClick}>Create New Profile</button> */}
 
       {showForm && (
         <UserProfileForm

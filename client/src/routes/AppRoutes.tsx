@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import DepartmentPage from '../pages/department/DepartmentPage';
 import ProfilePage from '../pages/user/ProfilePage';
 import HomePage from '../pages/home/HomePage';
-import LoginPage from '../pages/user/LoginPage';
+// import LoginPage from '../pages/user/LoginPage';
 import CoursePage from '../pages/course/CoursePage';
 import DepartmentDetailPage from '../pages/department/DepartmentDetailPage';
 import CourseDetailPage from '../pages/course/CourseDetailPage';
@@ -15,7 +15,8 @@ import AttendanceDetailPage from '../pages/attendance/AttendanceDetailPage';
 import AttendancePage from '../pages/attendance/AttendancePage';
 import AvailabilityPage from '../pages/availability/AvailabilityPage';
 import AvailabilityDetailPage from '../pages/availability/AvailabilityDetailPage';
-
+// import ProfilePage from '../pages/profile/ProfilePage';
+import LoginPage from '../pages/auth/LoginPage';
 const AppRoutes = () => (
     <Routes>
         {/* Core Routes */}

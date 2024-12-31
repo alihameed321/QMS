@@ -18,18 +18,29 @@ class Department(models.Model):
 
     def __str__(self):
         return self.name
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='profile')
-    contact = models.CharField(max_length=250)
-    dob = models.DateField(blank=True, null = True)
-    address = models.TextField(blank=True, null = True)
-    avatar = models.ImageField(blank=True, null = True, upload_to= 'images/')
-    user_type = models.IntegerField(default = 2)
-    gender = models.CharField(max_length=100, choices=[('Male','Male'),('Female','Female')], blank=True, null= True)
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, blank= True, null = True)
 
-    def __str__(self):
-        return self.user.username
+class UserProfile(models.Model):
+    ROLE_CHOICES = [
+        (1, 'Admin'),
+        (2, 'Teacher'),
+        (3, 'Student'),
+        (4, 'Parent'),
+        (5, 'Manager'),
+    ]
+    
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    contact = models.CharField(max_length=250)
+    dob = models.DateField(blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    avatar = models.ImageField(blank=True, null=True, upload_to='images/')
+    user_type = models.IntegerField(choices=ROLE_CHOICES, default=2)
+    gender = models.CharField(max_length=100, choices=[('Male','Male'),('Female','Female')], blank=True, null=True)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, blank=True, null=True)
+
+    @property
+    def role(self):
+        return self.get_user_type_display()
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

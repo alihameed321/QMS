@@ -1,3 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom styles */
+@import './styles/theme.css';
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/animations.css';
+
+/* Base styles */
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  @apply h-full bg-gray-50 dark:bg-gray-900;
+}
+
+body {
+  @apply h-full m-0 font-sans text-gray-900 dark:text-gray-100;
+}
+
+#root {
+  @apply h-full;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

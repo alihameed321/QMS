@@ -1,0 +1,123 @@
+@layer utilities {
+  /* Containers */
+  .container-fluid {
+    @apply w-full px-4 mx-auto;
+  }
+
+  .container-sm {
+    @apply max-w-3xl mx-auto px-4;
+  }
+
+  .container-md {
+    @apply max-w-4xl mx-auto px-4;
+  }
+
+  .container-lg {
+    @apply max-w-6xl mx-auto px-4;
+  }
+
+  .container-xl {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Grids */
+  .grid-cols-auto-fit {
+    @apply grid grid-cols-1 gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Flex Layouts */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-around {
+    @apply flex items-center justify-around;
+  }
+
+  .flex-evenly {
+    @apply flex items-center justify-evenly;
+  }
+
+  /* Spacing */
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-margin {
+    @apply my-12 md:my-16 lg:my-20;
+  }
+
+  /* Responsive Hide/Show */
+  .hide-on-mobile {
+    @apply hidden md:block;
+  }
+
+  .show-on-mobile {
+    @apply block md:hidden;
+  }
+
+  /* Z-index Utilities */
+  .z-nav {
+    @apply z-50;
+  }
+
+  .z-modal {
+    @apply z-40;
+  }
+
+  .z-dropdown {
+    @apply z-30;
+  }
+
+  .z-tooltip {
+    @apply z-20;
+  }
+
+  /* Shadows */
+  .shadow-card {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .shadow-dropdown {
+    @apply shadow-lg;
+  }
+
+  /* Animations */
+  .fade-in {
+    @apply opacity-0 animate-[fadeIn_0.3s_ease-in-out_forwards];
+  }
+
+  .slide-in {
+    @apply translate-y-4 opacity-0 animate-[slideIn_0.3s_ease-in-out_forwards];
+  }
+
+  /* Borders */
+  .border-light {
+    @apply border border-gray-200;
+  }
+
+  .border-medium {
+    @apply border-2 border-gray-300;
+  }
+
+  .border-heavy {
+    @apply border-4 border-gray-400;
+  }
+
+  /* Background Patterns */
+  .bg-pattern-dots {
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 1rem 1rem;
+  }
+
+  .bg-pattern-lines {
+    background-image: linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 1rem 1rem;
+  }
+}
