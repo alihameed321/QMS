@@ -29,12 +29,12 @@ router.register(r'courses', CourseViewSet)
 router.register(r'students', StudentViewSet)
 router.register(r'classes', ClassViewSet)
 router.register(r'classstudents', ClassStudentViewSet)
-router.register(r'attendance', AttendanceViewSet)
+router.register(r'attendances', AttendanceViewSet)
 router.register(r'availabilities', AvailabilityViewSet)
 
 urlpatterns = [
      path('', include(router.urls)),
      # JWT auth endpoints:
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]

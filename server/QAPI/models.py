@@ -125,7 +125,6 @@ class Attendance(models.Model):
     def __str__(self):
         return self.classIns.name + "  " +self.student.student_code
 
-# api/models.py
 
 class Availability(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)

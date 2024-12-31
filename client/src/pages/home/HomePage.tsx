@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "../components/features/common/Card"; // updated path to Card component
+import Card from "../../components/features/common/Card"; // updated path to Card component
 
 // You can define a simple "resource" interface for clarity
 interface Resource {
@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
           <Card key={resource.name} style={{ padding: "1rem" }}>
             <h2>{resource.name}</h2>
             <p>API Endpoint:</p>
-            <code>{`/api${resource.path}/`}</code>
+            <code>{`/${resource.path}/`}</code>
             
             {/* 
               If you have a dedicated React route for each resource, 

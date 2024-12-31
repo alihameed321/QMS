@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import UserProfileList from "../components/features/userProfile/UserProfileList";
-import UserProfileForm from "../components/features/userProfile/UserProfileForm";
-import { UserProfile } from "../types/UserProfile";
+import UserProfileList from "../../components/features/userProfile/UserProfileList";
+import UserProfileForm from "../../components/features/userProfile/UserProfileForm";
+import { UserProfile } from "../../types/UserProfile";
 
 const ProfilePage: React.FC = () => {
   const [showForm, setShowForm] = useState(false);

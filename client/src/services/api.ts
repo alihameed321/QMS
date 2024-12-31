@@ -19,17 +19,6 @@ api.interceptors.request.use((config) => {
   }, (error) => {
     return Promise.reject(error);
   });
-  
-// Function to get all departments
-export const getDepartments = () => api.get('/departments');
 
-// Function to create a new department
-export const createDepartment = (data: any) => api.post('/departments', data);
 
-// Function to update an existing department
-export const updateDepartment = (id: string | number, data: any) => api.put(`/departments/${id}`, data);
-
-// Function to delete a department
-export const deleteDepartment = (id: string | number) => api.delete(`/departments/${id}`);
-//
 export default api; // Export the Axios instance for use in other files
